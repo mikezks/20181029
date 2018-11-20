@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+/**
+ * Custom theme definition
+ * Source: https://github.com/angular/material2/blob/master/
+ *         src/lib/core/theming/prebuilt/indigo-pink.scss
+ **/
+ @import '~@angular/material/theming';
+
+ @include mat-core();
+ $primary: mat-palette($mat-indigo);
+ $accent:  mat-palette($mat-pink, A200, A100, A400);
+ $theme: mat-light-theme($primary, $accent);
+ 
+ 
+ /* Integration of component themes */
+ @import 'projects/flight-app/src/app/flight-booking/flight-search/flight-search.theming';
+ 
+ @mixin flight-theme($theme) {
+     @include flight-search-theme($theme);
+     /* Add additional component themes here */
+ }
+ 
+ 
+ /* Include Angular Material and custom themes */
+ @include angular-material-theme($theme);
+ @include flight-theme($theme);
+ 
+ 
+ /* Global styles */
+ body { margin: 0; }
+ 
+ mat-card {
+     margin: 10px;
+ }
+ 

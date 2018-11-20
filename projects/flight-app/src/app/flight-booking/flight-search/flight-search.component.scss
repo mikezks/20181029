@@ -1,0 +1,16 @@
+a:not([href]):not([tabindex]) {
+    &, &:link, &:active, &:hover, &:focus, &:visited {
+        cursor: pointer;
+        color: darkslateblue;
+    }
+}
+
+.mat-form-field {
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+[mat-table] {
+    width: 100%;
+}   

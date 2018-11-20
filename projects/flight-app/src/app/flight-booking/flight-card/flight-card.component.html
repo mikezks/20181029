@@ -1,0 +1,31 @@
+<mat-card
+    [ngStyle]="{ 'background-color': (selected) ? 'steelblue' : undefined }">
+    <mat-card-title>{{item.from}} - {{item.to}}</mat-card-title>
+    <mat-card-subtitle>{{ item.delayed ? 'delayed' : 'on schedule' }}</mat-card-subtitle>
+    <mat-card-content>
+        {{ item.date | date:'long':'':'es' }}
+    </mat-card-content>
+
+    <mat-card-actions style="text-align: right">
+        <button
+            *ngIf="!selected"
+            (click)="select()"
+            mat-mini-fab>
+            <mat-icon>add</mat-icon>
+        </button>
+
+        <button
+            *ngIf="selected"
+            (click)="deselect()"
+            mat-mini-fab>
+            <mat-icon>remove</mat-icon>
+        </button>
+        <!-- [routerLink]="['/flight-edit', item.id, {showDetails: false}]" -->
+        <a
+            (click)="edit()"
+            mat-mini-fab>
+            <mat-icon>edit</mat-icon>
+        </a>
+    </mat-card-actions>
+
+</mat-card>

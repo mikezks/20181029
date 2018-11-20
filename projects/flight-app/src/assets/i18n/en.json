@@ -1,0 +1,11 @@
+{
+    "FLIGHTS": {
+        "title": "Search for Flights",
+        "search": "Search",
+        "totalFound": "Flights found: {{count}}",
+        "delayedFound": "Delayed flights found: {{count}}",
+        "from": "from",
+        "to": "to",
+        "delayFlight": "Delay 1st flight"
+    }
+}

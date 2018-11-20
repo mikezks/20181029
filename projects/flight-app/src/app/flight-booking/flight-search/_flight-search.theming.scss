@@ -1,0 +1,9 @@
+@mixin flight-search-theme($theme) {
+    $primary: map-get($theme, primary);
+
+    [flightTableStyle] {
+        &.active {
+            background-color: mat-color($primary, 50);
+        }
+    }   
+}

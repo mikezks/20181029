@@ -1,0 +1,11 @@
+{
+    "FLIGHTS": {
+        "title": "Flugsuche",
+        "search": "Suchen",
+        "totalFound": "Flüge gefunden: {{count}}",
+        "delayedFound": "Verspätete Flüge gefunden: {{count}}",
+        "from": "von",
+        "to": "nach",
+        "delayFlight": "Verspätung für 1. Flug"
+    }
+}
